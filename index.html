@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -116,53 +117,76 @@
     </section>
 
     <!-- Repair Shop Management Control -->
-    <section class="features" id="features">
+       <section class="features" id="features">
         <div class="container">
             <div class="section-header">
                 <h2>Repair Shop Management Control</h2>
                 <p>One feature-rich platform to consolidate, streamline, and manage your repair business operations.</p>
             </div>
             <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-desktop"></i></div>
-                    <h3>Point of Sale Software</h3>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📦</div>
-                    <h3>Inventory Management</h3>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📅</div>
-                    <h3>Appointments Scheduling</h3>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👥</div>
-                    <h3>Employee Management</h3>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📊</div>
-                    <h3>Business Reporting</h3>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <div class="feature-item" data-target="payments">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
                     <h3>Integrated Payments</h3>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
-                    <h3>SMS & Email Notification</h3>
+                <div class="feature-item" data-target="appointments">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3>Appointment Scheduling</h3>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fa-solid fa-ticket"></i></div>
+                <div class="feature-item active" data-target="pos">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3>Point of Sale Software</h3>
+                </div>
+                <div class="feature-item" data-target="notifications">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3>SMS and Email Notification</h3>
+                </div>
+                <div class="feature-item" data-target="employees">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>Employee Management</h3>
+                </div>
+                <div class="feature-item" data-target="reporting">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Reporting</h3>
+                </div>
+                <div class="feature-item" data-target="tickets">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-ticket"></i>
+                    </div>
                     <h3>Repair Ticket Management</h3>
                 </div>
             </div>
             <div class="product-mockup">
-                <div class="">
-                    <div class="elementor-widget-container"> <img width="550" height="385" alt="" nitro-lazy-src="https://d1v4k1xgetr2r1.cloudfront.net/rd-cdn/2025/01/08112855/SMS-and-Email-Notification.webp" class="attachment-full size-full wp-image-15504 lazyloaded" decoding="async" nitro-lazy-empty="" id="MzY3MDoyMzU=-1" src="https://d1v4k1xgetr2r1.cloudfront.net/rd-cdn/2025/01/08112855/SMS-and-Email-Notification.webp"> </div>
+                <div class="mockup-image">
+                    <svg id="feature-graphic" width="500" height="350" viewBox="0 0 500 350">
+                        <!-- Default POS graphic -->
+                        <rect x="50" y="50" width="400" height="250" rx="10" fill="#f5e6d3" stroke="#8B4513" stroke-width="2"/>
+                        <rect x="70" y="80" width="360" height="40" rx="5" fill="#8B4513"/>
+                        <text x="250" y="105" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Point of Sale System</text>
+                        <rect x="80" y="140" width="150" height="40" rx="5" fill="#e8d5c4"/>
+                        <text x="155" y="165" text-anchor="middle" fill="#5D4037" font-size="14">Checkout</text>
+                        <rect x="250" y="140" width="150" height="40" rx="5" fill="#e8d5c4"/>
+                        <text x="325" y="165" text-anchor="middle" fill="#5D4037" font-size="14">Inventory</text>
+                        <rect x="80" y="200" width="150" height="40" rx="5" fill="#e8d5c4"/>
+                        <text x="155" y="225" text-anchor="middle" fill="#5D4037" font-size="14">Reports</text>
+                        <rect x="250" y="200" width="150" height="40" rx="5" fill="#e8d5c4"/>
+                        <text x="325" y="225" text-anchor="middle" fill="#5D4037" font-size="14">Customers</text>
+                    </svg>
                 </div>
-                <div class="">
-                   <h1>Employee Management</h1>
-                   <p>.</p>
+                <div class="mockup-content">
+                    <h1 id="feature-title">Point of Sale</h1>
+                    <p id="feature-description">Generate more revenue and provide a great checkout experience to your customers with a comprehensive POS software that has everything you need for your business operations. Sell more repair services, accessories and gadgets, generate and print invoices, collect payments, and more – all from a single POS system screen. RepairDesk Point of sale software is fast, efficient, reliable, and tailor-made for your store's workflow.</p>
                 </div>
             </div>
             <div class="cta-center">
@@ -172,45 +196,53 @@
     </section>
 
     <!-- Unified Communication Ecosystem -->
- <section class="communication" id="integrations">
+<section class="communication" id="integrations">
     <div class="container">
         <div class="section-header">
             <h2>Unified Communication Ecosystem</h2>
             <p>A Unified Communication Ecosystem integrated with RepairDesk to manage all your calls, emails, texts, website queries and social media messages in one place.</p>
         </div>
         
-        <div class="communication-cards">
-            
-            <div class="comm-card card-blue">
-                <div class="card-content-wrapper">
-                    <h3>Multi-channel Inbox</h3>
-                    <div class="product-badge">
-                        <div class="product-icon product-icon-blue"></div>
-                        <span>RepairDesk Connect</span>
+        <div class="communication-content">
+            <div class="communication-cards">
+                <div class="comm-card card-blue active" data-card="connect">
+                    <div class="card-content-wrapper">
+                        <div class="card-icon">
+                            <i class="fas fa-inbox"></i>
+                        </div>
+                        <h3>Multi-channel Inbox</h3>
+                        <div class="product-badge">
+                            <span>RepairDesk Connect</span>
+                        </div>
                     </div>
                 </div>
-                </div>
-            
-            <div class="comm-card card-green">
-                <div class="card-content-wrapper">
-                    <h3>Integrated Phone System</h3>
-                    <div class="product-badge">
-                        <div class="product-icon product-icon-green"></div>
-                        <span>PhonePro</span>
+                
+                <div class="comm-card card-green" data-card="phone">
+                    <div class="card-content-wrapper">
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Integrated Phone System</h3>
+                        <div class="product-badge">
+                            <span>PhonePro</span>
+                        </div>
                     </div>
                 </div>
-                </div>
-            
-            <div class="comm-card card-orange">
-                <div class="card-content-wrapper">
-                    <h3>Appointment Scheduling</h3>
-                    <div class="product-badge">
-                        <div class="product-icon product-icon-orange"></div>
-                        <span>Appointments Pro</span>
+                
+                <div class="comm-card card-orange" data-card="appointments">
+                    <div class="card-content-wrapper">
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Appointment Scheduling</h3>
+                        <div class="product-badge">
+                            <span>Appointments Pro</span>
+                        </div>
                     </div>
                 </div>
-                </div>
-            
+            </div>
+
+            </div>
         </div>
     </div>
 </section>
@@ -340,15 +372,15 @@
 
     <!-- Trusted Section -->
     <section class="trusted">
-        <div class="container">
-            <h2>Trusted by More Than 3,000+ Repair Stores</h2>
-            <div class="trusted-video">
-                <div class="video-placeholder">
-                    <div class="play-button">▶</div>
-                </div>
+    <div class="container">
+        <h2>Trusted by More Than 3,000+ Repair Stores</h2>
+        <div class="trusted-video">
+            <div class="video-placeholder">
+                <div class="play-button">▶</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Call-to-Action Section -->
     <section class="cta-section">
